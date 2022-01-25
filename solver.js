@@ -209,4 +209,12 @@ var prepare = function(words) {
             };
         }
     }
+
+    // assign Enter key to “Next guess”
+    document.onkeyup = function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("next-guess").click();
+        }
+    };
 }());
