@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wordle Solver</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Wordle Solver</h1>
+
+    <p>Your next guess is</p>
+
+    <table cellspacing="6">
+        <tr class="word">
+            <td id="letter-0">&mdash;</td>
+            <td id="letter-1">&mdash;</td>
+            <td id="letter-2">&mdash;</td>
+            <td id="letter-3">&mdash;</td>
+            <td id="letter-4">&mdash;</td>
+        </tr>
+        <tr class="green">
+            <td><label for="radio-letter-0-green"><input type="radio" value="!" name="radio-letter-0" id="radio-letter-0-green" /></label></td>
+            <td><label for="radio-letter-1-green"><input type="radio" value="!" name="radio-letter-1" id="radio-letter-1-green" /></label></td>
+            <td><label for="radio-letter-2-green"><input type="radio" value="!" name="radio-letter-2" id="radio-letter-2-green" /></label></td>
+            <td><label for="radio-letter-3-green"><input type="radio" value="!" name="radio-letter-3" id="radio-letter-3-green" /></label></td>
+            <td><label for="radio-letter-4-green"><input type="radio" value="!" name="radio-letter-4" id="radio-letter-4-green" /></label></td>
+        </tr>
+        <tr class="yellow">
+            <td><label for="radio-letter-0-yellow"><input type="radio" value="?" name="radio-letter-0" id="radio-letter-0-yellow" /></label></td>
+            <td><label for="radio-letter-1-yellow"><input type="radio" value="?" name="radio-letter-1" id="radio-letter-1-yellow" /></label></td>
+            <td><label for="radio-letter-2-yellow"><input type="radio" value="?" name="radio-letter-2" id="radio-letter-2-yellow" /></label></td>
+            <td><label for="radio-letter-3-yellow"><input type="radio" value="?" name="radio-letter-3" id="radio-letter-3-yellow" /></label></td>
+            <td><label for="radio-letter-4-yellow"><input type="radio" value="?" name="radio-letter-4" id="radio-letter-4-yellow" /></label></td>
+        </tr>
+        <tr class="grey">
+            <td><label for="radio-letter-0-grey"><input type="radio" value="-" name="radio-letter-0" id="radio-letter-0-grey" /></label></td>
+            <td><label for="radio-letter-1-grey"><input type="radio" value="-" name="radio-letter-1" id="radio-letter-1-grey" /></label></td>
+            <td><label for="radio-letter-2-grey"><input type="radio" value="-" name="radio-letter-2" id="radio-letter-2-grey" /></label></td>
+            <td><label for="radio-letter-3-grey"><input type="radio" value="-" name="radio-letter-3" id="radio-letter-3-grey" /></label></td>
+            <td><label for="radio-letter-4-grey"><input type="radio" value="-" name="radio-letter-4" id="radio-letter-4-grey" /></label></td>
+        </tr>
+    </table>
+
+    <p>
+        <button id="next-guess">Next guess</button>
+        <button id="reset">Reset</button>
+    </p>
+
+    <p>Words in search space: <span id="search-space"></span></p>
+
+    <footer><a href="https://github.com/yannlandry/wordle-solver">GitHub</a> | <a href="https://linkedin.com/in/yannlandry">LinkedIn</a> | <a href="https://instagram.com/yannlandry.photography">Instagram</a></footer>
+
+    <script type="text/javascript" src="words.js"></script>
+    <script type="text/javascript" src="solver.js"></script>
+</body>
+
+</html>

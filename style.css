@@ -1,0 +1,81 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(231, 232, 237);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+h1 {
+    margin: 40px 0;
+    text-align: center;
+}
+p {
+    margin: 20px 0;
+    text-align: center;
+}
+a {
+    color: #005282;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+a:hover {
+    color: #00395B;
+}
+table {
+    margin: 0 auto;
+    padding: 0;
+}
+tr.word {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+td {
+    width: 60px;
+    height: 60px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(208, 209, 213);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: inset 0px 0px 30px rgba(100, 100, 100, 0.2);
+    transition: box-shadow 0.5s ease;
+}
+tr.green td:hover, tr.yellow td:hover, tr.grey td:hover {
+    box-shadow: inset 2px 2px 30px rgba(100, 100, 100, 0.5);
+}
+tr.green td, td.green {
+    background-color: rgb(100, 170, 85);
+}
+tr.yellow td, td.yellow {
+    background-color: rgb(234, 179, 3);
+}
+tr.grey td, td.grey {
+    background-color: rgb(96, 102, 133);
+}
+td.green, td.yellow, td.grey {
+    color: #FFF;
+}
+td label {
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+}
+td label:hover {
+    cursor: pointer;
+}
+input {
+    visibility: hidden;
+}
+input:hover {
+    cursor: pointer;
+}
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
