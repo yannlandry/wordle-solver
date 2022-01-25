@@ -179,7 +179,7 @@ var prepare = function(words) {
     document.getElementById("next-guess").onclick = function() {
         let result = get_result();
         if (result.length < 5) {
-            alert("Please enter result for all 5 letters.");
+            alert("Please enter the result for all 5 letters by clicking the coloured squares.");
             return;
         }
 
@@ -196,10 +196,7 @@ var prepare = function(words) {
         guess = prepare(words);
     };
 
-    document.getElementById("reset").onclick = function() {
-        reset();
-    };
-
+    // assign radio buttons to control letter colours
     let colours = ["green", "yellow", "grey"];
     for (let i = 0; i < 5; ++i) {
         for (let c = 0; c < colours.length; ++c) {
@@ -217,4 +214,22 @@ var prepare = function(words) {
             document.getElementById("next-guess").click();
         }
     };
+
+    // program Reset button
+    document.getElementById("reset").onclick = function() {
+        reset();
+    };
+
+    // program Custom guess button
+    document.getElementById("custom-guess").onclick = function() {
+        let custom_guess = prompt("Please enter a custom guess:").toLowerCase();
+
+        if (ALLWORDS.indexOf(custom_guess) == -1) {
+            alert("Please enter a valid 5-letter word.");
+            return;
+        }
+
+        guess = custom_guess;
+        display_next_guess(guess);
+    }
 }());
