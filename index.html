@@ -11,7 +11,7 @@
 <body>
     <h1>Wordle Solver</h1>
 
-    <p>Your next guess is</p>
+    <p>Your next guess is:</p>
 
     <table cellspacing="6">
         <tr class="word">
@@ -45,14 +45,27 @@
     </table>
 
     <p>
-        <button id="next-guess">Next guess</button>
-        <button id="custom-guess">Custom guess</button>
-        <button id="reset">Reset</button>
+        <button id="next-guess" class="highlight" title="View next guess with current results">Next</button>
+        <button id="custom-guess" title="Replace current guess with custom guess">Custom</button>
+        <button id="reset" title="Reset the Wordle solver to the beginning">Reset</button>
+        <button id="help" title="How to use this app">Help</button>
     </p>
 
     <p>Words in search space: <span id="search-space"></span></p>
 
-    <footer><a href="https://github.com/yannlandry/wordle-solver">GitHub</a> | <a href="https://linkedin.com/in/yannlandry">LinkedIn</a> | <a href="https://instagram.com/yannlandry.photography">Instagram</a></footer>
+    <footer>
+        <a href="https://github.com/yannlandry/wordle-solver" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/yannlandry" target="_blank">LinkedIn</a> |
+        <a href="https://instagram.com/yannlandry.photography" target="_blank">Instagram</a>
+    </footer>
+
+    <div id="modal">
+        <div>
+            <p>Enter the displayed word into Wordle and feed the results (green, yellow and grey letters) back into the Solver. Click “Next” to reveal the next best guess suggested by the Solver.</p>
+            <p>Alternatively, you may click “Custom” to enter your own custom guess into the Solver. This is practical if you've already done a few guesses and want guidance on what to do next.</p>
+            <button id="close" class="highlight">Close</button>
+        </div>
+    </div>
 
     <script type="text/javascript" src="words.js"></script>
     <script type="text/javascript" src="solver.js"></script>

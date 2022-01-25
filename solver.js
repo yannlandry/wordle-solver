@@ -224,6 +224,10 @@ var prepare = function(words) {
     document.getElementById("custom-guess").onclick = function() {
         let custom_guess = prompt("Please enter a custom guess:").toLowerCase();
 
+        if (custom_guess === null) {
+            return;
+        }
+
         if (ALLWORDS.indexOf(custom_guess) == -1) {
             alert("Please enter a valid 5-letter word.");
             return;
@@ -231,5 +235,13 @@ var prepare = function(words) {
 
         guess = custom_guess;
         display_next_guess(guess);
+    };
+
+    document.getElementById("help").onclick = function() {
+        document.getElementById("modal").className = "active";
+    };
+
+    document.getElementById("close").onclick = function() {
+        document.getElementById("modal").className = "";
     }
 }());
