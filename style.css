@@ -125,17 +125,9 @@ div#modal button {
     margin: 0 auto;
 }
 footer {
-    position: absolute;
-    bottom: 20px;
     width: 100%;
+    padding: 50px 0 20px;
     text-align: center;
-}
-footer.noabs {
-    position: static;
-    padding-bottom: 20px;
-}
-div#benchmark-results {
-    margin-bottom: 50px;
 }
 code {
     background-color: rgb(208, 209, 213);
