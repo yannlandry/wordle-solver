@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wordle Solver: Benchmark</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="style.css?202201251800" />
+</head>
+
+<body>
+    <h1><a href="index.html">Wordle Solver</a></h1>
+
+    <p><strong>Benchmark</strong></p>
+
+    <p class="limited">This tool runs the Wordle Solver against all words in either the answer list (nearly 3000) or all words in the accepted guesses list (13000). Note that the Wordle Solver is slightly optimized to win against the list of answers.</p>
+
+    <p>
+        <label for="use-wordset-all"><input type="radio" name="use-wordset" value="all" id="use-wordset-all" checked="checked" /> Benchmark against all allowed words</label><br />
+        <label for="use-wordset-answers"><input type="radio" name="use-wordset" value="answers" id="use-wordset-answers" /> Benchmark against possible answers only</label>
+    </p>
+
+    <p><button class="highlight" id="benchmark-button">Benchmark</button></p>
+
+    <div id="benchmark-results">
+        <p class="limited"><em><strong>Note: </strong> The benchmark tool will run in your browser and is not very well optimized. Expect your window to become unresponsive for up to several minutes once the test is launched. For better visibility, the JavaScript console occasionally displays progress messages.</em></p>
+    </div>
+
+    <footer class="noabs">
+        <a href="https://github.com/yannlandry/wordle-solver" target="_blank">GitHub</a> |
+        <a href="https://linkedin.com/in/yannlandry" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/@LandryYann" target="_blank">Twitter</a>
+    </footer>
+
+    <script type="text/javascript" src="words.js"></script>
+    <script type="text/javascript" src="answers.js"></script>
+    <script type="text/javascript" src="solver.js?202201251800"></script>
+    <script type="text/javascript" src="benchmark.js?202201251800"></script>
+
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-H294RQN2NB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H294RQN2NB');
+    </script>
+</body>
+
+</html>

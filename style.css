@@ -1,5 +1,6 @@
 html, body {
     width: 100%;
+    /*height: 100%;*/
     margin: 0;
     padding: 0;
     background-color: rgb(231, 232, 237);
@@ -7,11 +8,15 @@ html, body {
     font-size: 16px;
 }
 h1 {
-    margin: 40px 0;
+    margin: 0;
+    padding-top: 40px;
     text-align: center;
 }
+h1 > a, h1 > a:hover {
+    color: #000;
+}
 p {
-    margin: 20px 0;
+    margin: 20px 0 0;
     text-align: center;
 }
 a {
@@ -23,7 +28,7 @@ a:hover {
     color: #00395B;
 }
 table {
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 0;
 }
 tr.word {
@@ -64,13 +69,10 @@ td label {
     height: 60px;
     line-height: 60px;
 }
-td label:hover {
-    cursor: pointer;
-}
-input {
+td input {
     visibility: hidden;
 }
-input:hover {
+label:hover, input:hover {
     cursor: pointer;
 }
 button {
@@ -127,4 +129,33 @@ footer {
     bottom: 20px;
     width: 100%;
     text-align: center;
+}
+footer.noabs {
+    position: static;
+    padding-bottom: 20px;
+}
+div#benchmark-results {
+    margin-bottom: 50px;
+}
+code {
+    background-color: rgb(208, 209, 213);
+    font-family: monospace;
+}
+.benchmark-win, .benchmark-loss, .benchmark-fail {
+    margin-top: 5px;
+    font-weight: bold;
+}
+.benchmark-win {
+    color: rgb(100, 170, 85);
+}
+.benchmark-loss {
+    color: rgb(234, 179, 3);
+}
+.benchmark-fail {
+    color: rgb(220, 80, 80);
+}
+.limited {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
