@@ -1,3 +1,4 @@
+// improvement #1: prioritize words with overall more common letters when the search space is small
 var tiebreaker = {};
 
 function find_next_guess(words) {
@@ -90,7 +91,6 @@ function match_word(word, guess, result) {
             if (index != -1) {
                 // found character in yellows, therefore the word is still valid
                 yellows.splice(index, 1);
-                //console.log(">>> " + yellows);
                 continue;
             }
             if (greys.indexOf(char) != -1) {
